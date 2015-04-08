@@ -1,0 +1,38 @@
+{
+	"name": "markdown-fluxible",
+	"private": true,
+	"version": "0.0.0",
+	"description": "Example simple markdown editor by Fluxible architecture.",
+	"repository": "https://github.com/kanedam/markdown-fluxible",
+	"main": "js/client.js",
+	"dependencies": {
+		"babel": "^4.7.16",
+		"express": "^4.12.3",
+		"fluxible": "^0.3.3",
+		"marked": "^0.3.0",
+		"serialize-javascript": "^1.0.0"
+	},
+	"devDependencies": {
+		"babelify": "^5.0.4",
+		"browserify": "^6.2.0",
+		"envify": "^3.0.0",
+		"jest-cli": "~0.4.0",
+		"uglify-js": "~2.4.15",
+		"watchify": "^2.1.1"
+	},
+	"scripts": {
+		"start": "watchify -o build/bundle.js -v -d .",
+		"build": "NODE_ENV=production browserify . | uglifyjs -cm > build/bundle.min.js",
+		"test": "jest"
+	},
+	"author": "KANEDA Masashi",
+	"browserify": {
+		"transform": [
+			"babelify",
+			"envify"
+		]
+	},
+	"jest": {
+		"rootDir": "./js"
+	}
+}
