@@ -23,8 +23,7 @@
 	"scripts": {
 		"start": "watchify -o build/bundle.js -v -d .",
 		"build": "NODE_ENV=production browserify . | uglifyjs -cm > build/bundle.min.js",
-		"test": "jest",
-		"postinstall": "NODE_ENV=production browserify -o build/bundle.js -d ."
+		"test": "jest"
 	},
 	"author": "KANEDA Masashi",
 	"browserify": {
