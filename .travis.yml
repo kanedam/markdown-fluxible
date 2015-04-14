@@ -1,3 +1,12 @@
 language: node_js
 node_js:
-	- "0.12"
+- '0.12'
+- '0.11'
+- '0.10'
+deploy:
+  provider: heroku
+  api_key:
+    secure: csPdfUFEbbWkswRh7+UKw6GmRg1YaFdJq0xbA++54nk/HPNI/w1ygRq5mmr45HESyLs33rImjM2gPJaH3boXbAATQ5R4WMJWgif46Gfh+0Gj3wA9+2kbqW8NIQSfZOiEMXm0B2hjkXK07RJm7FeEn4PzpV/5kIvjkyYE02gzrvI=
+  app: peaceful-brushlands-9245
+  on:
+    repo: kanedam/markdown-fluxible
