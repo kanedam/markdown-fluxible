@@ -1,6 +1,10 @@
 language: node_js
 node_js:
-- '0.12'
+  - '0.12'
+
+scripts:
+  - ./node_modules/.bin/browserify -o build/bundle.js -d .
+
 deploy:
   provider: heroku
   api_key:
@@ -8,3 +12,5 @@ deploy:
   app: peaceful-brushlands-9245
   on:
     repo: kanedam/markdown-fluxible
+
+sudo: false
