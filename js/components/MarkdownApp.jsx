@@ -7,7 +7,7 @@ module.exports = React.createClass({
 	render: function () {
 		return (
 			<div id="editor">
-				<MarkdownInput text="# Hello heroku" />
+				<MarkdownInput text="# Hello" />
 				<MarkdownItem />
 			</div>
 		);
