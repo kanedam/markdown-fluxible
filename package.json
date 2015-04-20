@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"description": "Example simple markdown editor by Fluxible architecture.",
 	"repository": "https://github.com/kanedam/markdown-fluxible",
-	"main": "js/client.js",
+	"main": "js/server.js",
 	"dependencies": {
 		"babel": "^4.7.16",
 		"express": "^4.12.3",
@@ -21,8 +21,9 @@
 		"watchify": "^2.1.1"
 	},
 	"scripts": {
-		"start": "node js/server.js & watchify -o build/bundle.js -v -d .",
-		"build": "NODE_ENV=production browserify . | uglifyjs -cm > build/bundle.min.js",
+		"start": "node js/server.js",
+		"dev": "node js/server.js & watchify -o build/bundle.js -v -d js/client.js",
+		"build": "browserify js/client.js -t [envify --NODE_ENV production] | uglifyjs -cm > build/bundle.min.js",
 		"test": "jest"
 	},
 	"author": "KANEDA Masashi",
