@@ -1,16 +1,13 @@
 language: node_js
 node_js:
-  - '0.12'
-
+- '0.12'
 scripts:
-  - ./node_modules/.bin/browserify -o build/bundle.js -d .
-
+- "./node_modules/.bin/browserify -o build/bundle.js -d ."
 deploy:
   provider: heroku
   api_key:
-    secure: csPdfUFEbbWkswRh7+UKw6GmRg1YaFdJq0xbA++54nk/HPNI/w1ygRq5mmr45HESyLs33rImjM2gPJaH3boXbAATQ5R4WMJWgif46Gfh+0Gj3wA9+2kbqW8NIQSfZOiEMXm0B2hjkXK07RJm7FeEn4PzpV/5kIvjkyYE02gzrvI=
+    secure: h4VkVqzXWci8C6j4aFjgzrmehnWdRIGOnwMpqMhysw83zjt3z8hSingVdrAhhKOagCO+dXBV04wPBO1lFr9FUXA9PQUAPkWrg9u4+hyaXM8YReH02qAn2BY81tzmd5q1s2o2QQyi60+qXyndXdcJ2RzGGTgIn3FCbqnu9OrN45Y=
   app: markdown-fluxible
   on:
     repo: kanedam/markdown-fluxible
-
 sudo: false
